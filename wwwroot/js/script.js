@@ -8,11 +8,11 @@ let Q_WEIGHT = 0.1;
 let I_WEIGHT = 0.1;
 
 $('#submit').click(function () {
-    let asgn = parseFloat(document.getElementById('asgn').value);
-    let grpProj = parseFloat(document.getElementById('gp').value);
-    let ex = parseFloat(document.getElementById('ex').value);
-    let qz = parseFloat(document.getElementById('qz').value);
-    let intex = parseFloat(document.getElementById('in').value);
+    let asgn = parseFloat($('#asgn').val());
+    let grpProj = parseFloat($('#gp').val());
+    let ex = parseFloat($('#ex').val());
+    let qz = parseFloat($('#qz').val());
+    let intex = parseFloat($('#in').val());
 
     //Calculate grades
     let total = ((asgn) * A_WEIGHT) + ((grpProj) * GP_WEIGHT) + ((ex) * E_WEIGHT) + ((qz) * Q_WEIGHT) + ((intex) * I_WEIGHT);
@@ -47,8 +47,8 @@ $('#submit').click(function () {
 
     alert("Total Grade: " + total + "% [" + letterGrade + "]")
     //Display Grade
-    document.getElementById('totalScore').innerHTML = total + '%';
-    document.getElementById('letterGrade').innerHTML = '[' + letterGrade + ']';
+    $('#totalScore').innerHTML = total + '%';
+    $('#letterGrade').innerHTML = '[' + letterGrade + ']';
 })
 
 
