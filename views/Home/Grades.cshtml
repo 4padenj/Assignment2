@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "The Ganderson - Grades";
+    ViewBag.Heading = "Grade Calculator";
+    ViewBag.SubHeading = "Calculate Some Grades";
+}
+@model   GradesModel
+
+<body>
+    <div class="container mb-5">
+        <form method="post">
+            <fieldset>
+                <h3>Percentage of Grade Category</h3>
+                <h6>Enter a percentage(ie: 93), number only</h6>
+                <div class="form-group">
+                    <label class="form-check-label">
+                        Assignments
+                    </label>
+                    <input class="form-check-input" id="asgn" asp-for="asgn"/><br />
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label">
+                        Group Project
+                    </label>
+                    <input class="form-check-input" id="gp" asp-for="gp"/><br />
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label">
+                        Quizzes
+                    </label>
+                    <input class="form-check-input" id="qz" asp-for="qz"/><br />
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label">
+                        Exams
+                    </label>
+                    <input class="form-check-input" id="ex" asp-for="ex"/><br />
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label">
+                        INTEX
+                    </label>
+                    <input class="form-check-input" id="in" asp-for="intex"/><br />
+                </div>
+
+                <div class="form-group"><button type="submit" id="submit">See Score</button></div>
+                <div class="form-check-label" asp-validation-summary="All"></div>
+                <div class="Score-Display">
+                    <h3>Grade: <span id="totalScore"></span>&#x09;&#x09;<span id="letterGrade"></span></h3>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>

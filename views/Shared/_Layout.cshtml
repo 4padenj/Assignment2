@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="~/img/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    @* My Own CSS *@
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="jumbotron align-text-center">
+            <h1>@ViewBag.Heading</h1>
+            <h6>@ViewBag.SubHeading</h6>
+
+            <menu>
+                <ul>
+                    <li class="nav-list"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="nav-list"><a asp-controller="Home" asp-action="Grades">Grades</a></li>
+                </ul>
+            </menu>
+        </div>
+        @RenderBody()
+    </div>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

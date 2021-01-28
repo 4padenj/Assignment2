@@ -1,0 +1,17 @@
+﻿body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width:450px;
+}
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+li.nav-list {
+    list-style-type:none;
+}
+
+
